@@ -9,9 +9,7 @@ const devServer = (isDev) => !isDev ? {} : {
   devServer: {
     open: true,
     hot: true,
-    port: 3001,
-    contentBase: path.join(__dirname, 'public'),
-    inline: false
+    port: 3002,    
   },
 };
 
@@ -59,12 +57,12 @@ module.exports = ({ development }) => ({
       filename: '[name].[contenthash].css'
     }),
     new HtmlWebpackPlugin({
-      title: 'async-race',
+      // title: 'async-race',
       template: './src/index.html'
     }),
     new CopyPlugin({
       patterns: [
-        { from: 'public' },
+        { from: './src/assets', to: './assets' },
       ],
     }),
     new CleanWebpackPlugin({
