@@ -55,6 +55,8 @@ export default class Car implements ICar {
       body: JSON.stringify(dataParams),
     });
     const result = await response.json();
+    console.log(result.JSON.s);
+    
     return result;
   }
 

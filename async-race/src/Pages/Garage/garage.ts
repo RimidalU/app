@@ -56,8 +56,6 @@ class GaragePage extends Page {
     const car = new Car();
     const titleCar = this.createHeaderTitle(car.render());
     this.container.append(titleCar);
-    console.log(car.getCar);
-
     return this.container;
   }
 }
